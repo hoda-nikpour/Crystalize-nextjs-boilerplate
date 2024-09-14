@@ -1,187 +1,93 @@
-# Crystallize NextJS Boilerplate
+# AI-Powered Front-End Development Applied on Crystallize Next.js Boilerplate
 
-----
+![Figs](./public/static/figs.png)
 
-This repository is what we call a "subtree split": a read-only copy of one directory of the main repository. 
+# Introduction
 
-If you want to report or contribute, you should do it on the main repository: https://github.com/CrystallizeAPI/boilerplates
+Crystallize helps businesses create customized eCommerce experiences. By
+integrating AI into the platform, we can unlock innovative solutions to enhance
+its features and stay ahead of industry trends. With AI being such a popular
+topic, there are many ways to leverage its power within Crystallize. For
+example, AI could enhance the UI/UX templates by adapting to each customer’s
+unique interests and preferences, making the experience more personalized.
 
-----
+To demonstrate this concept, I utilized Crystallize’s **Next.js boilerplate**,
+applied traditional and generative AI to analyze user interactions with images,
+and made minor modifications to the homepage’s UI. In this small example, I
+specifically focused on the following elements:
 
-[![Crystallize Community Slack][21]][22] [![React: latest][0]][1]
-[![Next: latest][2]][3] [![code style: prettier][4]][5]
-[![code linter: Eslint][6]][7]
+- Main Background Color
+- Text Main Color
+- Text Sub Color
+- Box Background Color
 
-A fully-working ecommerce storefront boilerplate built with NextJS that runs on
-the [headless ecommerce][8] & GraphQL based [product Information Management][9]
-service [Crystallize][10]. **Clone, run it up and sell!**
+While this example is a simple initial demonstration, it effectively showcases
+the potential of this idea. A full-scale implementation would require further
+focus, study, and effort. With continued development, this concept could be
+scaled to provide a truly customized and engaging experience for each user.
 
-_⚠️ We also have some other [open-source ecommerce storefronts][11] that could
-be of your interest._
+## Determining a Customer’s Personalized Interests
 
-## See a LIVE demo
+To personalize the user experience, we can utilize various AI-powered methods to
+determine a customer’s preferences. One approach is to analyze the customer’s
+interaction history on the website and identify patterns in their choices.
+Alternatively, we could engage users in an interactive experience, such as a
+brief game where they select images from a set. By analyzing their choices, we
+can infer their preferences for colors, shapes, and design themes (e.g.,
+classic, modern, dark, or light) and predict their interests to adjust the UI
+accordingly, creating a more personalized experience.
 
-Enjoy our [demo furniture site][24].
+## Examples of Personalized UI Adjustments
 
-![Website that sell plants displaying them as a grid. Ecommerce created with the Crystallize NextJS boilerplate and powered by our GraphQL API](https://i.imgur.com/v3tGgyZ.png)
+### Example 1 (Fig.2):
 
-## Introduction
+- **User Interaction**: Clicks on images of a small leather sofa and a
+  creamy-colored sofa.
+- **Generative AI Analysis**: Predicts interest in the colors Alabaster, Dark
+  Gray, Dove Gray, and Sage Green.
 
-This Next.js boilerplate is a great starting point when building [React
-ecommerce][11] experiences that **create wonderful user experiences because we
-focus on [frontend performance][12]**.
+  **Resulting UI:**
 
-Build **a rich ecommerce that stands out from the others with our super
-structured [PIM][13] engine** (_Product Information Management_) in Crystallize
-powering your product catalogue.
+  - Main Background: `#F5F1E9` (Alabaster)
+  - Text Main: `#4A4A4A` (Dark Gray)
+  - Text Sub: `#7A7A7A` (Dove Gray)
+  - Box Background: `#B5C1A3` (Sage Green)
 
-[Site speed](https://crystallize.com/learn/best-practices/frontend-performance/site-speed)
-is an important component of the
-[SEO checklist](https://crystallize.com/learn/best-practices/seo/seo-checklist).
-[Measuring core web vitals](https://crystallize.com/learn/best-practices/frontend-performance/core-web-vitals)
-is important to make sure you rank higher in search engines and also improves
-your conversion rate. You sell attract more customers and sell more.
+### Example 2 (Fig.3):
 
-Build content rich eCommerce experiences. Freedom in
-[content modeling](https://crystallize.com/learn/best-practices/information-architecture/content-modeling)
-builds the foundation for an successful content strategy.
+- **User Interaction**: Clicks on images of an orange sofa and a creamy-colored
+  sofa.
+- **Generative AI Analysis**: Predicts interest in the colors Linen, Copper, and
+  Alabaster.
 
-## Get Started Immediately
+  **Resulting UI:**
 
-To get started, you can either watch the [livestream where we create an
-ecommerce from zero to production explaining all the steps][26] or follow the
-instructions below 👇.
+  - Main Background: `#EDDFD5` (Linen)
+  - Text Main: `#D96C3F` (Copper)
+  - Text Sub: `#F5F1E9` (Alabaster)
+  - Box Background: `#F5F1E9` (Alabaster)
 
-Use the [Crystallize CLI][17] to bootstrap a project in 4 simple guied steps.
+### Example 3 (Fig.4):
 
-Simply run the following command (>= Node 8 required):
+- **User Interaction**: Clicks on images of a small leather sofa and an orange
+  sofa.
+- **Traditional AI Analysis**: Predicts interest in the colors Camel, Bronze,
+  Pale Mauve, and Taupe.
 
-```sh
-npx @crystallize/cli my-project
-```
+  **Resulting UI:**
 
-**This will walk you through the steps:**
+  - Main Background: `#C5A987` (Camel)
+  - Text Main: `#A38144` (Bronze)
+  - Text Sub: `#DED3D7` (Pale Mauve)
+  - Box Background: `#6D5653` (Taupe)
 
-1. Choose the tech stack you want
+## Modified or Created Components
 
-   > To get this storefront, select: Next.js - Complete ecommerce
-
-2. Specify your tenant (the name of your project)
-
-   > At this point, you can select our demo tenant (furniture) or use your own.
-   > If you choose your own, you will have to create the content on our [Product
-   > Information Management][9]
-
-3. Select if you want to support multiple languages
-
-4. Select the service API
-   > At this point, you can select between our demo Service API or your own
-   > service API tenant.
-   >
-   > A [Service API is an open-source project that acts as backend for any of
-   > our open-source storefronts][25] that currently hndles the basket, the
-   > checkout, the authentication, webhooks, etc. You can modify and/or extended
-   > it as you like. Deploy it to Vercel, Amazon Web Services, etc. (we're
-   > adding new provieders)
-   >
-   > Take into account that if you've selected your own tenant, you need to have
-   > your own service API because our demo Service API doesn't support products
-   > with different shape/attributes.
-   >
-   > To have your own Service API, you'll need to execute again, our CLI and
-   > select the option "Service API - Backend for any of the frontends"
-
-Once your project has been created, you can simply navigate into your project's
-directory and run the following to start up your development server:
-
-```sh
-npm run dev
-# or
-yarn dev
-```
-
-This will start up the server on http://localhost:3000 for development.
-
-## App Structure
-
-### `src/pages/`
-
-Put all your entry pages here. These are interpreted as separate routes by
-Next.js.
-
-### `src/pages/api/`
-
-All your Vercel [serverless functions][18].
-
-### `src/page-components/`
-
-We use the `page-components/` directory to hold the actual component content
-related to entries in the `pages/` directory.
-
-### `src/components/`
-
-All your shared React components.
-
-### `src/shapes/`
-
-All your related stuff to shapes. Components, styles, graphql queries and more.
-
-### `src/ui/`
-
-UI related components live here. Color variables and simple shared components
-
-### `src/lib/`
-
-Enable GraphQL and REST API communication and more for the browser client
-
-### `public/static/`
-
-Public resources hosted as static files
-
-## Deploying Your Project
-
-There are multiple alternatives for deployments, two of them being [Vercel][20]
-and [Platform.sh][23]
-
-### Deploying with Vercel
-
-- Register a Vercel account
-- Install vercel `yarn global add vercel` or `npm i -g vercel`
-- Run `vercel`
-
-## License
-
-Open-source and MIT license.
-
-[0]: https://img.shields.io/badge/react-latest-44cc11.svg?style=flat-square
-[1]: https://github.com/facebook/react
-[2]: https://img.shields.io/badge/next-latest-44cc11.svg?style=flat-square
-[3]: https://github.com/zeit/next.js
-[4]:
-  https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square
-[5]: https://github.com/prettier/prettier
-[6]:
-  https://img.shields.io/badge/code_linter-eslint-463fd4.svg?style=flat-square
-[7]: https://github.com/prettier/prettier
-[8]: https://crystallize.com/ecommerce
-[9]: https://crystallize.com/ecommerce/pim
-[10]: https://crystallize.com
-[11]: https://crystallize.com/developers
-[12]: https://crystallize.com/blog/frontend-performance-measuring-kpis
-[13]: https://crystallize.com/ecommerce/pim
-[14]: https://crystallize.com/blog/ecommerce-seo-checklist
-[15]:
-  https://crystallize.com/blog/content-rich-storytelling-makes-juicy-ecommerce
-[16]:
-  https://snowball.digital/blog/content-strategy-for-exponential-growth-marketing
-[17]: https://github.com/crystallizeapi/crystallize-cli
-[18]: https://vercel.com/docs/v2/serverless-functions/introduction
-[19]: https://vercel.com/guides/deploying-nextjs-with-now/
-[20]: https://vercel.com
-[21]:
-  https://img.shields.io/static/v1?label=Slack&logo=slack&message=Crystallize%20Community&color=68d1b7
-[22]: https://slack.com
-[23]: https://platform.sh
-[24]: https://furniture.superfast.shop/
-[25]: https://github.com/CrystallizeAPI/service-api-boilerplate/
-[26]: https://crystallize.com/learn/open-source/boilerplates/react-nextjs
+- Created an `ImageClickedContext.js` component in the `lib` directory.
+- Created an AI folder under the `src` directory and added the related
+  components there, aiming to keep the new parts organized within a single
+  folder as much as possible.
+- Made modifications to the entry component (`index.js`) within the `pages`
+  directory.
+- Leveraged generative AI to navigate Crystallize's **Next.js boilerplate**,
+  addressing implementation challenges and debugging more efficiently.
